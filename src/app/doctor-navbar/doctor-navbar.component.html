@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span>Hospital</span>
+    <span class="example-spacer"></span>
+    <mat-icon routerLink="/doctor-view" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <mat-icon  aria-hidden="false" aria-label="Example home icon" (click)="openDialog()">add</mat-icon>
+    <mat-icon routerLink="/leave-status" aria-hidden="false" aria-label="Example thumbs up SVG icon">calendar_today</mat-icon>
+    <mat-icon  (click)="logout()"  aria-hidden="false" aria-label="Example home icon" >logout</mat-icon>
+    
+  </mat-toolbar>

@@ -1,0 +1,32 @@
+<h1 matDialogTitle>Request Leave</h1>
+<div mat-dialog-content> 
+       <form [formGroup]="leaveForm" >
+        <mat-form-field appearance="outline">
+            <mat-label>Leave type</mat-label>
+            <mat-select formControlName="leaveType">
+            <mat-option value="Casual">Casual</mat-option>
+            <mat-option value="Sick">Sick</mat-option>
+          </mat-select>
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Date</mat-label>
+          <input type="date" formControlName="date" name="date" matInput placeholder="Date">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration</mat-label>
+            <mat-select formControlName="duration">
+            <mat-option value="full day">Full day</mat-option>
+            <mat-option value="first half">First half</mat-option>
+            <mat-option value="second half">Second half</mat-option>
+          </mat-select>
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Description"></textarea>
+     </mat-form-field>
+       </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="requestLeave()" >Request</button>
+</div>
+

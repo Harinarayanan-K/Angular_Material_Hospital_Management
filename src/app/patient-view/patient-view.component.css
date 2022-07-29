@@ -1,0 +1,38 @@
+.box1
+{
+    width: 50%;
+    float: left;
+    /* background-image: url("https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?t=st=1658407887~exp=1658408487~hmac=d996eb5de7e7a2dd2af0e628a8d08e8eac0557d5b700695926473a0378089a73&w=900"); */
+
+}
+.box2
+{
+    width: 50%;
+    float: left;
+    padding-top:25px;
+}
+mat-form-field
+{
+   
+    width: 9cm;
+}
+
+.box2 form
+{
+    background-color: white;
+    width: 9cm;
+}
+form
+{
+    margin-left: 30px;
+}
+.main-body
+{
+    padding-top: 10px;
+}
+app-navbar[_ngcontent-xsb-c194] {
+    position: fixed;
+    z-index: 100;
+}
+
+

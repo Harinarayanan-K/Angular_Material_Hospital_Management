@@ -1,0 +1,22 @@
+.content1 img
+{
+    margin-top: 3cm;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    
+}
+.img {
+    width: 2.1cm;
+    height: 1.2cm;
+    padding-left: 0.6cm;
+    padding-top: 2px;
+}
+.left {
+    width: 50%;
+    float: left;
+}
+

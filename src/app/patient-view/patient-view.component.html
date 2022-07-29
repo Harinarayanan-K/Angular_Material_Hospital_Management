@@ -1,0 +1,73 @@
+
+<div class="main-body">
+    <div class="box1">
+     <img src="https://dunmedic.strongtheme.com/wp-content/uploads/2021/04/dunser01.png" alt="">
+    </div>
+    <div class="box2">
+        <h1 style="font-variant:small-caps;">
+            Book your slot..
+          </h1>
+        <form [formGroup]="patientForm" >
+              <P>
+                <mat-form-field appearance="fill">
+                    <mat-label>Patient name</mat-label>
+                      <input  formControlName="patientName" matInput placeholder="Patient name">
+                  </mat-form-field>
+              </P>
+              <p>
+                <mat-radio-group formControlName="gender"  aria-label="Select an option">
+                   <p> <mat-radio-button value="male">male</mat-radio-button></p>
+                    <mat-radio-button value="female">female</mat-radio-button>
+                  </mat-radio-group>
+              </p>
+              <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" formControlName="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+              </p>
+              <P>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput formControlName="phoneNumber" placeholder="Phone number">
+                  </mat-form-field>
+              </P>
+              <P>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input type="date" (selectionChange)="dates(inputDate.value,doctor.value
+                    )" #inputDate  formControlName="appointmentDate" matInput >    
+                  </mat-form-field>
+              </P>
+              <P>
+                <mat-form-field appearance="fill">
+                    <mat-label>Department</mat-label>
+                    <mat-select  formControlName="department"  #dept
+                    (selectionChange)="onChange(dept.value,inputDate.value)">
+                        <mat-option *ngFor="let i of departments" [value]="i">{{i}}</mat-option>
+                      </mat-select>
+                  </mat-form-field>
+              </P>
+              <P>
+                <mat-form-field appearance="fill">
+                    <mat-label>Doctors</mat-label>
+                    <mat-select  #doctor formControlName="doctorId"
+                    (selectionChange)="dates(inputDate.value, doctor.value)">
+                        <mat-option *ngFor="let i of doctors" [value]="i.id">{{i.name}}</mat-option>
+                      </mat-select>
+                  </mat-form-field>
+              </P>
+              <mat-form-field appearance="fill">
+                <mat-label>Time</mat-label>
+                <mat-select formControlName="time">
+                    <mat-option *ngFor="let i of array" [disabled]=getFontWeight(i) value={{i}}>{{i}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+              <p>
+                <a routerLink="/patient-view"><button mat-flat-button color="primary" (click)="postPatientDetails()">Book</button></a>
+              </p>   
+        </form>
+    </div>
+    </div>
+<app-footer></app-footer>

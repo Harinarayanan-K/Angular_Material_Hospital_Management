@@ -1,0 +1,43 @@
+<h1 matDialogTitle>Add Doctors</h1>
+<div mat-dialog-content>
+  
+       <form [formGroup]="doctorForm" >
+        <mat-form-field appearance="outline">
+          <mat-label>Doctor name</mat-label>
+          <input formControlName="name" matInput placeholder="Doctor name">
+          <mat-error *ngIf="myError('name','pattern')">numbers and special symbols are not allowed</mat-error>
+          <mat-error *ngIf="myError('name','')">Minimum four letters required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email address</mat-label>
+          <input type="email" (change)="validateEmail()" appForbiddenName formControlName="email" name="email" matInput placeholder="Email address">
+          <mat-error *ngIf="myError('email','pattern')" >enter valid email </mat-error>
+        </mat-form-field>
+       <span *ngIf="this.emailValidity==this.doctorForm.value.email" style="color: red; padding-bottom: 5px;">email already exist</span>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone number</mat-label>
+          <input formControlName="phoneNumber" matInput placeholder="Phone number">
+          <mat-error *ngIf="myError('phoneNumber','pattern')">enter valid mobile number</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" formControlName="password" matInput placeholder="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Departments</mat-label>
+          <mat-select formControlName="speciality">
+          <mat-option value="Ortho">Ortho</mat-option>
+          <mat-option value="Cardio">Cardio</mat-option>
+          <mat-option value="Neuro">Neuro</mat-option>
+          <mat-option value="Dentel">Dentel</mat-option>
+        </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Education</mat-label>
+          <input formControlName="education" matInput placeholder="Education">
+        </mat-form-field>
+       </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button  mat-raised-button color="primary" [disabled]="doctorForm.invalid" (click)=addDoctor()  >Save</button>
+</div>

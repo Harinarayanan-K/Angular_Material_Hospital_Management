@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>supervised_user_circle</mat-icon>
+  </button>
+  <span>Hospital</span>
+  <span class="example-spacer"></span>
+  <mat-icon routerLink="/index" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  <mat-icon routerLink="/leave-requests" aria-hidden="false" matBadgeColor="warn" matBadgeSize="small"
+    aria-label="Example home icon" matBadge={{count}} [matBadgeHidden]="count===0">notifications</mat-icon>
+  <mat-icon routerLink="/approved-leaves" class="icon" aria-hidden="false" aria-label="Example home icon"><i
+      class="fa-solid fa-person-circle-check fa-sm"></i></mat-icon>
+  <mat-icon (click)="logout()" aria-hidden="false" aria-label="Example home icon">logout</mat-icon>
+
+</mat-toolbar>

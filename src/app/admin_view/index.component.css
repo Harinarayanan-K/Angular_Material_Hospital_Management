@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+.container {
+  margin: 80px;
+}
+
+.mat-fab {
+  margin-left: 97%;
+  margin-top: 40px;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0%;
+}
+
+.doctor_details {
+  margin-top: 40px;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.editbtn {
+  border-style: hidden;
+}
+.editbtn{ cursor: pointer; }
+i:hover {
+  color: red;
+}

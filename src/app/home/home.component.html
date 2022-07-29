@@ -1,0 +1,105 @@
+<app-navbar ></app-navbar>
+<div class="container">
+    <mat-tab-group>
+        <mat-tab label="About"> 
+            <div class="box1">
+                <div class="content">
+                    <h1 class="title-word title-word-1" >THE BEST DOCTOR </h1>
+                    <h2 class="title-word title-word-2">GIVES THE LEAST MEDICINE</h2>
+                </div>
+                <!-- <img src="https://mcithedoctorsoffice.ca/wp-content/uploads/2017/10/1920-x-800.png" alt=""> -->
+            </div>
+            <div class="box1-2">
+                <h3>We are here </h3>
+                <p>We lend our hands to you with a mission to exceed your expectations. Our well-trained staffs are right in
+                    front of you with quality care services and comprehensive health screening programs.
+                    The facilitated services will be provided for people who reside within 10 km of the hospital premise. The
+                    service can only be availed through booking and the time is scheduled between 9 am to 5 pm.</p>
+            </div>
+            <div class="box1-3">
+                <div class="sub-box2">
+                    <img
+                        src="https://www.aamc.org/sites/default/files/styles/scale_and_crop_1200_x_666/public/Public%20Opinion%20Research%201200x666.jpg?itok=Z9g0DOPe">
+                   
+                </div>
+                <div class="sub-box2">
+                    <img
+                        src="https://www.hematologyadvisor.com/wp-content/uploads/sites/14/2019/01/pediatricg622282914_1257950-640x393.jpg">
+                </div>
+                <div class="sub-box2">
+                    <img src="https://www.plus100years.com/uploads/happy_doctor.jpg">
+                </div>
+            </div>
+          
+            <div class="footer">
+                <div class="footer1">
+                    <h3>Quick Links</h3>
+                    <br>
+                    <h5>Find a Doctor</h5>
+                    <h5>Book an Appointment</h5>
+                    <h5>Make an Enquiry</h5>
+                    <h5>Leave a Feedback</h5>
+                    <h5>Hospitals</h5>
+                    <h5>XYZ Wellness</h5>
+                    <h5>XYZ Volunteers</h5>
+                    <h5>XYZ Foundation</h5>
+                    <h5>Insurance</h5>
+                    <h5>Careers</h5>
+                    <h5>Admission & Discharge</h5>
+                    <h5>Guidelines for Patient & Attendants</h5>
+                    <h5>Patient Rights and Responsibilities</h5>
+                </div>
+                <div class="footer2">
+                    <h3>Multispeciality</h3>
+                    <br>
+                    <h5>Anaesthesiology</h5>
+                    <h5>Bariatric Metabolic Surgery</h5>
+                    <h5>Dentistry</h5>
+                    <h5>Dermatology</h5>
+                    <h5>ENT And Head & Neck Surgery</h5>
+                    <h5>Emergency Medicine</h5>
+                    <h5>Endocrinology & Diabetology</h5>
+                    <h5>IVF & Fertility</h5>
+                    <h5>Internal Medicine</h5>
+                    <h5>Nephrology</h5>
+                    <h5>Nutrition & Dietetic</h5>
+                    <h5>Ophthalmology</h5>
+                    <h5>Rheumatology</h5>
+                    <h5>Urology</h5>
+                </div>
+                <div class="footer3">
+                    <h3>Contact Us</h3>
+                    <br>
+                    <h5>9656761548</h5>
+                    <h5>xyzhospital@gmail.com</h5>
+                    <h5>xyx hospital</h5>
+                    <h5>Kakkanad</h5>
+                    <h5>Kochi</h5>
+                    <h5>kerala</h5>
+                    <h5>PIN:679355</h5>
+                    <br>
+                    <h4>social</h4>
+                    <table>
+                        <th><a href="#" class="fa fa-facebook"></a></th>
+                        <th> <a href="#" class="fa fa-twitter"></a></th>
+                    </table>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Book"> 
+            <div class="box2">
+                <!-- <div id="change" class="main" onmouseover="change()">
+                    <h3>Book your slots Now...</h3>
+                    <a routerLink="/patient-view"> <button mat-raised-button color="primary">Book</button></a>
+                    <a routerLink="/login"> <button mat-raised-button color="primary">Login</button></a>
+                </div> -->
+                <app-patient-view></app-patient-view>
+            </div>
+        <app-footer></app-footer>
+        </mat-tab>
+        <mat-tab label="Login">
+         <app-login></app-login>
+         <app-footer></app-footer>  
+        </mat-tab>
+      </mat-tab-group>
+</div>
